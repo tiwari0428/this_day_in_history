@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.controls, .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+input[type="date"],
+select,
+button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  background: white;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+li img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.dark header, .dark footer {
+  background-color: #000000;
+}
+
+.dark li {
+  background: #1e1e1e;
+  color: white;
+}
+
+#toggle-theme i {
+  transition: transform 0.3s ease;
+}
+
+.dark #toggle-theme i {
+  transform: rotate(180deg);
+}
+

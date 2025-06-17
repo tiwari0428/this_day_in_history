@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>This Day in History</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>This Day in History</h1>
+    <p>Discover what happened on your birthday or any special date</p>
+  </header>
+
+  <main class="container">
+    <div class="controls">
+      <input type="date" id="datePicker" />
+      <select id="country">
+        <option value="World">🌍 World</option>
+        <option value="India">🇮🇳 India</option>
+        <option value="USA">🇺🇸 USA</option>
+        <option value="UK">🇬🇧 UK</option>
+      </select>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+      </select>
+      <button onclick="fetchEvents()">🔍 Get Events</button>
+      <button id="toggle-theme"><i class="fas fa-moon">dark mode</i></button>
+    </div>
+
+    <div class="actions">
+      <button onclick="copyToClipboard()">📋 Copy</button>
+      <button onclick="downloadEvents()">💾 Download</button>
+      <button onclick="speakEvents()">🔊 Listen</button>
+      <button onclick="shareEvents()">📤 Share</button>
+    </div>
+
+    <div id="date"></div>
+    <ul id="history-events"></ul>
+
+    <h3>⭐ Favorites <button onclick="clearFavorites()">🧹 Clear</button></h3>
+    <ul id="favorites"></ul>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 This Day in History. Built with ❤️ by Akanksha</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
